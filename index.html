@@ -2,121 +2,182 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;600&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <link rel="stylesheet" href="styles.css">
     <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/8ddb0baafc.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <!--NAYBAR-->
-    <nav>
-        <div class="left">
-            <a href="/">Prudence Uzoama</a>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/logo.png" class="logo" >
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fas fa-times" onclick="closeMenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openMenu()"></i>
+        </nav>
+        <div class="header-text">
+            <p>Software Engineer</p>
+            <h1>Hi, I'm <span>Prudence</span> Uzoama</h1>
         </div>
-        <div class="right">
-            <a href="http://github.com" target="_blank" rel="noopener noreferrer">
-                <i class="fa-brands fa-square-github"></i>
-                <span>Github</span>
-            </a>
+    </div>
+</div>
+<!------about section------>
 
-            <a href="http://linkedin.com/in/ebukaprudenceuzoama/" target="_blank" rel="noopener noreferrer">
-                <i class="fa-brands fa-linkedin"></i>
-                <span>Linkedin</span>
-            </a>
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/about.jpg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>I’m a Computer Science student with a strong interest in building software that solves real-world problems 
+                    and improves everyday experiences. I enjoy turning ideas into functional, user-friendly applications by 
+                    combining logical problem-solving with thoughtful design. My technical background includes Python, C++, 
+                    HTML, CSS, and JavaScript, with growing experience in machine learning, data analysis, and AI-driven tools. 
+                    I’m especially interested in how technology can be used to create scalable, impactful solutions across 
+                    industries. Beyond coding, I value continuous learning, collaboration, and challenges that push me to grow 
+                    both technically and personally. I’m always looking for opportunities to apply my skills, learn new 
+                    technologies, and contribute meaningfully to innovative projects.</p>
 
-            <a href="mailto:j01026167@students.jsums.edu">
-                <i class="fa-regular fa-envelope"></i>
-                <span>Email</span>
-            </a>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>AI Engineering</span><br>Build and Train ML Models</li>
+                        <li><span>Web Development</span><br>Build Responsive Websites</li>
+                        <li><span>Product Management</span><br>Define Product Strategy & User Needs</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>October 2025 - Present</span><br>AI Engineer/CTO at RapidReliefAI</li>
+                        <li><span>September 2025 - Present</span><br>Cybersecurity Intern at Mississippi E-center</li>
+                        <li><span>September 2025 - December 2025</span><br>AI/ML Engineer Fellow at Anote BTT</li>
+                        <li><span>May 2025 - July 2025</span><br>Research Intern at Indiana State University</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>August 2024 - May 2028</span><br>Computer Science BS at Jackson State University</li>
+                        <li><span>September 2016 - August 2022</span><br>High School Diploma at St. Augustine's College, Nigeria</li>
+                    </ul>
+            </div>
         </div>
-    </nav>
+    </div>
+</div>
+<!---services section------>
 
-        <main>
-            <!--SECTION 1 Hero-->
-            <section class="Hero-section">
-                <div class="text">
-                    <h2>Hi, I'm Prudence 👋</h2>
-                    <p>I am a confident Computer Science Freshman at Jackson State University and a proud member of the W.E.B. Harvey Du Bois Honors College. Passionate about software development and fostering the tech industry, I also tutor SAT Math at schoolhouse.world, helping students excel in mathematics while sharing my enthusiasm for technology.</p>
-
-                    <div class="links">
-                        <a href="#skills">
-                            <i class="fa-solid fa-code"></i>
-                            <span>Skills</span>
-                        </a>
-
-                        <a href="#contact">
-                            <i class="fa-solid fa-envelope"></i>
-                            <span>Contact</span>
-                        </a>
-                    </div>
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-box">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Web Development</h2>
+                <p>Building responsive and user-friendly websites using HTML, CSS, and JavaScript to create engaging online experiences.</p>
+                <a href="#">learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-robot"></i>
+                <h2>AI Solutions</h2>
+                <p>Developing AI-driven applications and machine learning models to solve complex problems and enhance business processes.</p>
+                <a href="#">learn more</a>
+            </div>
+            <div>
+                <i class="fa fa-product-hunt"></i>
+                <h2>Product Management</h2>
+                <p>Defining product strategies, managing development cycles, and ensuring products meet user needs and business goals.</p>
+                <a href="#">Learn more</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!---Contact section------>
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-at"></i> ebuka_chidubem.p.uzoama@students.jsums.edu</p>
+                <p><i class="fa-solid fa-phone"></i> +1 (424) 394-6281</p>
+                <div class="social-icons">
+                    <a href="https://github.com/Prudent05"><i class="fa-brands fa-github"></i></a>
+                    <a href="mailto:J01026167@students.jsums.edu"><i class="fa-solid fa-envelope"></i></a>
+                    <a href="https://www.linkedin.com/in/ebukaprudenceuzoama/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://x.com/prudynat?s=11"><i class="fa-brands fa-x-twitter"></i></a>
                 </div>
-               
-                <div class="headshot">
-                    <img src="Images/1G1A9260.png" alt="Prudence Uzoama Headshot">
-                </div>
-            </section>
+            <div class="resume-btn">
+                <a href="Images/Resume Ebuka Chidubem Prudence Uzoama.pdf" download class="btn btn2">Download Resume</a>
+            </div>
+            </div>
+            <div class="contact-right">
+                <form name="YOUR_FORM_NAME">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
 
-            <!--SECTION 2 Skills-->
-            <section id="skills" class="skills-section">
-                <h2>Skills</h2>
-                <div class="text">I am proficient in Time Managament, Leadership, Mathematics, Microsoft, and Organization. My Technical Skills are displayed below</div>
-                <div class="cells">
-                    <div class="cell">
-                        <img src="Images/c++ logo.jfif" alt="c++ logo">
-                        <span>C++</span>
-                    </div>
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
 
-                    <div class="cell">
-                        <img src="Images/html logo.png" alt="html logo">
-                        <span>HTML</span>
-                    </div>
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+    function openMenu(){
+        sidemenu.style.right = "0";
+    }
+    function closeMenu(){
+        sidemenu.style.right = "-200px";
+    }
+</script>
+<script>
+	const scriptURL = 'https://script.google.com/macros/s/AKfycbytxMLoFKW8JWHBgLIRaQSDi0Y2KR34XFYeGv4OlZQKTwswdEs3aWIQfpAINcE676M6qQ/exec'
+	const form = document.forms['YOUR_FORM_NAME']
+    const msg = document.getElementById("msg");
 
-                    <div class="cell">
-                        <img src="Images/python logo.jfif" alt="python logo">
-                        <span>PYTHON</span>
-                    </div>
-
-                    <div class="cell">
-                        <img src="Images/javascript logo.png" alt="javascript logo">
-                        <span>JAVASCRIPT</span>
-                    </div>
-
-                    <div class="cell">
-                        <img src="Images/css logo.png" alt="css logo">
-                        <span>CSS</span>
-                    </div>
-
-                </div>
-            </section>
-
-            <!--SECTION 3 Contact-->
-            <section id="contact" class="contact-section">
-                <h2>Contact</h2>
-                <div class="group">
-                    <div class="text">
-                        Let's Get in Touch!                                                                     I’m always excited to connect with fellow students, educators, and tech enthusiasts. Whether you have questions, opportunities, or just want to chat about software development, feel free to reach out! Let’s collaborate and inspire each other on this journey in the tech industry.
-                    </div>
-                    <form>
-                        <label for="name">Name</label>
-                        <input type="text" id="name">
-
-                        <label for="email">Email</label>
-                        <input type="email" id="email">
-
-                        <label for="message">Message</label>
-                        <textarea id="message" cols="30" rows="10"></textarea>
-
-                        <button type="submit">Send Message</button>
-                    </form>
-                </div>
-            </section>
-        </main>
+	form.addEventListener('submit', e => {
+		e.preventDefault()
+		fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+			.then(response => response.json())
+			.then(response => {msg.innerHTML = "Message sent successfully!"
+                setTimeout(function(){
+                    msg.innerHTML = ""
+                }, 5000)
+                form.reset()
+    })
+			.catch(error => console.error('Error!', error.message))
+	})
+</script>
 
 </body>
 </html>
+<!------about section------>      
